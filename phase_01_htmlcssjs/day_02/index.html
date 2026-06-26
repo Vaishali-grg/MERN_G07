@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3{
+            color:green;
+        }
+        button{
+
+            width:100px;
+            padding:10px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM 1</h1>
+    <h3>Welcome to my Webpage</h3>
+    <button id="sub">Exit</button>
+</body>
+</html>
+<script>
+    // console.log("Hello")
+    // arr=[1,2,3,4,5]
+    // console.log(arr.length)
+
+    var btn=document.querySelector("#sub")
+    btn.addEventListener("click",eventButton)
+
+    var flag=false
+
+    function eventButton(){
+        // alert("Button Clicked")
+
+        flag=!flag
+        if(flag){
+            var h3=document.querySelector("h3")
+            h3.innerText="Okay! Thanks for visitng"
+            btn.innerHTML="Welcome"
+            h3.style.color="red"
+        }
+        else{
+            var h3=document.querySelector("h3")
+            h3.innerText="Welcome to my Webpage"
+            btn.innerHTML="Exit"
+            h3.style.color="green"
+        }
+
+    }
+
+
+
+</script>
